@@ -5,15 +5,25 @@
 - 2x Bosch CJ125 wideband lambda controller
 - NXP TJA1051T can transceiver
 - Analog Devices LT2633 dual channel 10-bit I²C DAC
-- TI REF5050-Q1 reference for analog part
+- TI REF5050-Q1 precision reference (0.05%) for analog part
+- Infineon TLS115B0EJXUMA1 voltage tracker
 - ...
 
 ### Features: ### 
-- supports LSU4.9 probes only
+- supports **LSU4.9** probes only
 - dual analog output, either as 0..5V for AFR 10..20 OR narrow band emulation
 - CAN output (AEM X-Series protocol) for both channels
 
-Suitable Bosch lambda probe: 0 258 017 025<br/>
+### Suitable Bosch lambda probes: ###
+|Bosch number  |Length overall|Comment|
+|--------------|--------------|-------|
+|0 258 017 025 |1000mm|Bosch motorsport part|
+|0 258 017 012 |1060mm||
+|0 281 004 184 |1000mm||
+|0 281 004 150 |1215mm||
+|0 258 017 126 |680mm|black, used by BMW after 09/2006 (1178 7561410)|
+|0 258 017 029 |620mm|grey, used by BMW after 09/2006 (1178 7539124)|
+|...|||
 
 Probe pinout:<br/>
 |Pin#|Color|Description|Symbol|

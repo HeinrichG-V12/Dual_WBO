@@ -9,6 +9,8 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+#include "spi/spi.h"
+
 int main(void)
 {
     /* Replace with your application code */
