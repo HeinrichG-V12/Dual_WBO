@@ -7,6 +7,7 @@
 - Analog Devices LT2633 dual channel 10-bit I²C DAC
 - TI REF5050-Q1 precision reference (0.05%) for analog part
 - Infineon TLS115B0EJXUMA1 voltage tracker
+- Molex MX150 20-pin connector (348302001)
 - ...
 
 ### Features: ### 
@@ -27,7 +28,7 @@
 |0 258 017 038 |340mm|grey, used by BMW (11787537984)|
 |...|||
 
-Probe pinout:<br/>
+### LSU4.9 probe pinout: ###
 |Pin#|Color|Description|Symbol|
 |----|-----|--------|-----------|
 |1|red|Pump current APE|IP|
