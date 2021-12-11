@@ -1,19 +1,33 @@
 # Dual_WBO
 
+## Development status: ##
+- Hardware: working in progress, check hardware/V0.0.1 for actual status
+- Software: not started yet
+
 ### Dual WBO controller based on: ### 
 - Microchip AT90CAN128
 - 2x Bosch CJ125 wideband lambda controller
 - NXP TJA1051T can transceiver
 - Analog Devices LT2633 dual channel 10-bit I²C DAC
-- TI REF5050-Q1 precision reference (0.05%) for analog part
-- Infineon TLS115B0EJXUMA1 voltage tracker
-- Molex MX150 20-pin connector (348302001)
+- TI REF5050-Q1 5v and 10mA precision reference (0.05%) for TLS115
+- Infineon TLS115B0EJXUMA1 voltage tracker for analog part, provides 5v and 150mA
 - ...
 
 ### Features: ### 
 - supports **LSU4.9** probes only
-- dual analog output, either as 0..5V for AFR 10..20 OR narrow band emulation
+- Automotive grade components
+- Molex MX150 20-pin automotive sealed connector (348302001)
+- 4 layer PCB
+
+### Inputs: ### 
+- 2x LSU4.9 probes
+- CAN high speed with 500kbit/s and extended IDs
+- input for activation the controller
+
+### Outputs: ### 
+- dual analog output, either as 0..5V for AFR 10..20 **OR** narrow band emulation
 - CAN output (AEM X-Series protocol) for both channels
+- CAN debug / diagnostic messages (pump current, battery voltage, heater power, ....)
 
 ### Suitable Bosch lambda probes: ###
 |Bosch number  |Length overall|Comment|
