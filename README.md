@@ -7,7 +7,7 @@
 ### Dual WBO controller based on: ### 
 - Microchip AT90CAN128
 - 2x Bosch CJ125 wideband lambda controller
-- NXP TJA1051T can transceiver
+- TI SN65HVD230 high speed can transceiver
 - Analog Devices LTC2633 dual channel 10-bit I²C DAC
 - Infineon TLE42754D LDO 5v and 450mA
 - TI REF5050-Q1 5v and 10mA precision reference (0.05%) for TLS115
@@ -23,7 +23,7 @@
 ### Inputs: ### 
 - 2x LSU4.9 probes
 - CAN high speed with 500kbit/s and extended IDs
-- input for activation the controller
+- TTL input for activation the controller
 
 ### Outputs: ### 
 - dual analog output, either as 0..4.096V for AFR 10..20 **OR** narrow band emulation
