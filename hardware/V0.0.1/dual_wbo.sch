@@ -8,34 +8,34 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
-<layer number="2" name="Route2" color="1" fill="3" visible="yes" active="no"/>
-<layer number="3" name="Route3" color="4" fill="3" visible="yes" active="no"/>
-<layer number="4" name="Route4" color="1" fill="4" visible="yes" active="no"/>
-<layer number="5" name="Route5" color="4" fill="4" visible="yes" active="no"/>
-<layer number="6" name="Route6" color="1" fill="8" visible="yes" active="no"/>
-<layer number="7" name="Route7" color="4" fill="8" visible="yes" active="no"/>
-<layer number="8" name="Route8" color="1" fill="2" visible="yes" active="no"/>
-<layer number="9" name="Route9" color="4" fill="2" visible="yes" active="no"/>
-<layer number="10" name="Route10" color="1" fill="7" visible="yes" active="no"/>
-<layer number="11" name="Route11" color="4" fill="7" visible="yes" active="no"/>
-<layer number="12" name="Route12" color="1" fill="5" visible="yes" active="no"/>
-<layer number="13" name="Route13" color="4" fill="5" visible="yes" active="no"/>
-<layer number="14" name="Route14" color="1" fill="6" visible="yes" active="no"/>
-<layer number="15" name="Route15" color="4" fill="6" visible="yes" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
-<layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="24" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -44,8 +44,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -53,19 +53,19 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
-<layer number="59" name="tPartCopper" color="7" fill="1" visible="yes" active="no"/>
-<layer number="60" name="Board" color="7" fill="1" visible="yes" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="59" name="tPartCopper" color="7" fill="1" visible="no" active="no"/>
+<layer number="60" name="Board" color="7" fill="1" visible="no" active="no"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
@@ -639,24 +639,6 @@
 <vertex x="-5.75" y="-2"/>
 </polygon>
 </package>
-<package name="ABM3">
-<description>&lt;b&gt;ABM3-8.000MHz-D2Y-T&lt;/b&gt;&lt;br&gt;
-</description>
-<smd name="1" x="-2.05" y="0" dx="2.4" dy="1.9" layer="1" rot="R90"/>
-<smd name="2" x="2.05" y="0" dx="2.4" dy="1.9" layer="1" rot="R90"/>
-<text x="-1.27" y="-3.81" size="1.27" layer="25" align="center">&gt;NAME</text>
-<text x="0" y="3.81" size="1.27" layer="27" align="center">&gt;VALUE</text>
-<wire x1="-2.5" y1="1.6" x2="2.5" y2="1.6" width="0.2" layer="51"/>
-<wire x1="2.5" y1="1.6" x2="2.5" y2="-1.6" width="0.2" layer="51"/>
-<wire x1="2.5" y1="-1.6" x2="-2.5" y2="-1.6" width="0.2" layer="51"/>
-<wire x1="-2.5" y1="-1.6" x2="-2.5" y2="1.6" width="0.2" layer="51"/>
-<wire x1="-4" y1="2.6" x2="4" y2="2.6" width="0.1" layer="51"/>
-<wire x1="4" y1="2.6" x2="4" y2="-2.6" width="0.1" layer="51"/>
-<wire x1="4" y1="-2.6" x2="-4" y2="-2.6" width="0.1" layer="51"/>
-<wire x1="-4" y1="-2.6" x2="-4" y2="2.6" width="0.1" layer="51"/>
-<wire x1="-2.5" y1="1.6" x2="2.5" y2="1.6" width="0.1" layer="21"/>
-<wire x1="-2.5" y1="-1.6" x2="2.5" y2="-1.6" width="0.1" layer="21"/>
-</package>
 <package name="R0603">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
 <wire x1="-0.432" y1="-0.356" x2="0.432" y2="-0.356" width="0.1524" layer="51"/>
@@ -1105,8 +1087,8 @@ Source: www.farnell.com/datasheets/247.pdf</description>
 <smd name="7" x="2.712" y="0.635" dx="1.525" dy="0.65" layer="1"/>
 <smd name="8" x="2.712" y="1.905" dx="1.525" dy="0.65" layer="1"/>
 <smd name="9" x="0" y="0" dx="3.2" dy="2.85" layer="1" rot="R90"/>
-<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
-<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<text x="0" y="3.81" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="0" y="-3.81" size="1.27" layer="27" align="center">&gt;VALUE</text>
 <wire x1="-3.725" y1="2.75" x2="3.725" y2="2.75" width="0.05" layer="51"/>
 <wire x1="3.725" y1="2.75" x2="3.725" y2="-2.75" width="0.05" layer="51"/>
 <wire x1="3.725" y1="-2.75" x2="-3.725" y2="-2.75" width="0.05" layer="51"/>
@@ -1117,6 +1099,24 @@ Source: www.farnell.com/datasheets/247.pdf</description>
 <wire x1="-1.95" y1="-2.45" x2="-1.95" y2="2.45" width="0.1" layer="51"/>
 <wire x1="-1.95" y1="1.18" x2="-0.68" y2="2.45" width="0.1" layer="51"/>
 <wire x1="-3.475" y1="2.58" x2="-1.95" y2="2.58" width="0.2" layer="21"/>
+</package>
+<package name="ABM3">
+<description>&lt;b&gt;ABM3-8.000MHz-D2Y-T&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-2.05" y="0" dx="2.4" dy="1.9" layer="1" rot="R90"/>
+<smd name="2" x="2.05" y="0" dx="2.4" dy="1.9" layer="1" rot="R90"/>
+<text x="-1.27" y="-3.81" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="0" y="3.81" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-2.5" y1="1.6" x2="2.5" y2="1.6" width="0.2" layer="51"/>
+<wire x1="2.5" y1="1.6" x2="2.5" y2="-1.6" width="0.2" layer="51"/>
+<wire x1="2.5" y1="-1.6" x2="-2.5" y2="-1.6" width="0.2" layer="51"/>
+<wire x1="-2.5" y1="-1.6" x2="-2.5" y2="1.6" width="0.2" layer="51"/>
+<wire x1="-4" y1="2.6" x2="4" y2="2.6" width="0.1" layer="51"/>
+<wire x1="4" y1="2.6" x2="4" y2="-2.6" width="0.1" layer="51"/>
+<wire x1="4" y1="-2.6" x2="-4" y2="-2.6" width="0.1" layer="51"/>
+<wire x1="-4" y1="-2.6" x2="-4" y2="2.6" width="0.1" layer="51"/>
+<wire x1="-2.5" y1="1.6" x2="2.5" y2="1.6" width="0.1" layer="21"/>
+<wire x1="-2.5" y1="-1.6" x2="2.5" y2="-1.6" width="0.1" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -1259,8 +1259,8 @@ Source: www.farnell.com/datasheets/247.pdf</description>
 <pin name="PG4(TOSC1)" x="35.56" y="-83.82" length="middle" direction="in" rot="R180"/>
 </symbol>
 <symbol name="TJA1051T">
-<pin name="CANH" x="12.7" y="5.08" length="short" rot="R180"/>
-<pin name="CANL" x="12.7" y="-5.08" length="short" rot="R180"/>
+<pin name="CANH" x="12.7" y="2.54" length="short" rot="R180"/>
+<pin name="CANL" x="12.7" y="-2.54" length="short" rot="R180"/>
 <pin name="VCC" x="-12.7" y="10.16" length="short" direction="sup"/>
 <pin name="GND" x="-12.7" y="-10.16" length="short" direction="sup"/>
 <pin name="TXD" x="-12.7" y="0" length="short"/>
@@ -1305,22 +1305,6 @@ Source: www.farnell.com/datasheets/247.pdf</description>
 <pin name="NC" x="10.16" y="-7.62" length="short" direction="nc" rot="R180"/>
 <pin name="VOUT" x="10.16" y="7.62" length="short" direction="out" rot="R180"/>
 <pin name="TRIM/NR" x="-10.16" y="-2.54" length="short" direction="in"/>
-</symbol>
-<symbol name="Q">
-<wire x1="1.016" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
-<wire x1="-2.54" y1="0" x2="-1.016" y2="0" width="0.1524" layer="94"/>
-<wire x1="-0.381" y1="1.524" x2="-0.381" y2="-1.524" width="0.254" layer="94"/>
-<wire x1="-0.381" y1="-1.524" x2="0.381" y2="-1.524" width="0.254" layer="94"/>
-<wire x1="0.381" y1="-1.524" x2="0.381" y2="1.524" width="0.254" layer="94"/>
-<wire x1="0.381" y1="1.524" x2="-0.381" y2="1.524" width="0.254" layer="94"/>
-<wire x1="1.016" y1="1.778" x2="1.016" y2="-1.778" width="0.254" layer="94"/>
-<wire x1="-1.016" y1="1.778" x2="-1.016" y2="-1.778" width="0.254" layer="94"/>
-<text x="2.54" y="1.016" size="1.778" layer="95">&gt;NAME</text>
-<text x="2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
-<text x="-2.159" y="-1.143" size="0.8636" layer="93">1</text>
-<text x="1.524" y="-1.143" size="0.8636" layer="93">2</text>
-<pin name="2" x="2.54" y="0" visible="off" length="point" direction="pas" swaplevel="1" rot="R180"/>
-<pin name="1" x="-2.54" y="0" visible="off" length="point" direction="pas" swaplevel="1"/>
 </symbol>
 <symbol name="FERRITE">
 <wire x1="-2.54" y1="-1.27" x2="-2.54" y2="0" width="0.254" layer="94"/>
@@ -1439,6 +1423,22 @@ Source: www.farnell.com/datasheets/247.pdf</description>
 <pin name="IN" x="-10.16" y="5.08" length="short"/>
 <pin name="EN" x="-10.16" y="2.54" length="short"/>
 <pin name="ADJ" x="10.16" y="5.08" length="short" rot="R180"/>
+</symbol>
+<symbol name="Q1">
+<wire x1="1.016" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-1.016" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.381" y1="1.524" x2="-0.381" y2="-1.524" width="0.254" layer="94"/>
+<wire x1="-0.381" y1="-1.524" x2="0.381" y2="-1.524" width="0.254" layer="94"/>
+<wire x1="0.381" y1="-1.524" x2="0.381" y2="1.524" width="0.254" layer="94"/>
+<wire x1="0.381" y1="1.524" x2="-0.381" y2="1.524" width="0.254" layer="94"/>
+<wire x1="1.016" y1="1.778" x2="1.016" y2="-1.778" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="1.778" x2="-1.016" y2="-1.778" width="0.254" layer="94"/>
+<text x="-2.54" y="2.286" size="1.778" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-3.81" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-2.159" y="-1.143" size="0.8636" layer="93">1</text>
+<text x="1.524" y="-1.143" size="0.8636" layer="93">2</text>
+<pin name="2" x="2.54" y="0" visible="pad" length="point" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="-2.54" y="0" visible="pad" length="point" direction="pas" swaplevel="1"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1682,35 +1682,6 @@ Source: &lt;a href="http://www.ti.com/general/docs/lit/getliterature.tsp?generic
 <attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.com/Search/Refine.aspx?Keyword=595-REF5050AIDR" constant="no"/>
 <attribute name="RS_PART_NUMBER" value="" constant="no"/>
 <attribute name="RS_PRICE-STOCK" value="" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="ABM3" prefix="Q" uservalue="yes">
-<description>&lt;b&gt;Abracon ABM3 series smd crystal, smaller alternative for ABM7 series&lt;/b&gt;&lt;p&gt;
-8MHz to 54MHz fundamental frequency range&lt;p&gt;
-54.100MHz to 80MHz 3rd overtone frequency range&lt;p&gt;
-Source: &lt;a href="https://abracon.com/Resonators/abm3.pdf"&gt; Datasheet &lt;/a&gt;</description>
-<gates>
-<gate name="G$1" symbol="Q" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="ABM3">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="ARROW_PART_NUMBER" value="ABM3-8.000MHZ-D2Y-T" constant="no"/>
-<attribute name="ARROW_PRICE-STOCK" value="https://www.arrow.com/en/products/abm3-8.000mhz-d2y-t/abracon?region=nac" constant="no"/>
-<attribute name="DESCRIPTION" value="Abracon 6 MHz, 8 MHz Crystal +/-20 ppm, +/-30 ppm 2-SMD, HC49/US, No Lead" constant="no"/>
-<attribute name="HEIGHT" value="1mm" constant="no"/>
-<attribute name="MANUFACTURER_NAME" value="ABRACON" constant="no"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="ABM3-8.000MHZ-D2Y-T" constant="no"/>
-<attribute name="MOUSER_PART_NUMBER" value="815-ABM3-8-D2Y-T" constant="no"/>
-<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/ABRACON/ABM3-8000MHZ-D2Y-T?qs=ihRgKfnEsN4giUXjc3yS1g%3D%3D" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -2054,6 +2025,35 @@ Source: &lt;a href="https://datasheet.datasheetarchive.com/originals/distributor
 <attribute name="MANUFACTURER_PART_NUMBER" value="TLS115B0EJXUMA1" constant="no"/>
 <attribute name="MOUSER_PART_NUMBER" value="726-TLS115B0EJXUMA1" constant="no"/>
 <attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/Infineon-Technologies/TLS115B0EJXUMA1?qs=Qyx3PVvfm669%2FyRQa%2FG9Ew%3D%3D" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ABM3" prefix="Q" uservalue="yes">
+<description>&lt;b&gt;Abracon ABM3 series smd crystal, smaller alternative for ABM7 series&lt;/b&gt;&lt;p&gt;
+8MHz to 54MHz fundamental frequency range&lt;p&gt;
+54.100MHz to 80MHz 3rd overtone frequency range&lt;p&gt;
+Source: &lt;a href="https://abracon.com/Resonators/abm3.pdf"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="Q1" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="ABM3">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="ARROW_PART_NUMBER" value="ABM3-8.000MHZ-D2Y-T" constant="no"/>
+<attribute name="ARROW_PRICE-STOCK" value="https://www.arrow.com/en/products/abm3-8.000mhz-d2y-t/abracon?region=nac" constant="no"/>
+<attribute name="DESCRIPTION" value="Abracon 6 MHz, 8 MHz Crystal +/-20 ppm, +/-30 ppm 2-SMD, HC49/US, No Lead" constant="no"/>
+<attribute name="HEIGHT" value="1mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="ABRACON" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="ABM3-8.000MHZ-D2Y-T" constant="no"/>
+<attribute name="MOUSER_PART_NUMBER" value="815-ABM3-8-D2Y-T" constant="no"/>
+<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/ABRACON/ABM3-8000MHZ-D2Y-T?qs=ihRgKfnEsN4giUXjc3yS1g%3D%3D" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -9608,8 +9608,8 @@ Source: Fairchild .. BAT54.pdf</description>
 </class>
 </classes>
 <parts>
-<part name="FRAME1" library="Heinrich" deviceset="FRAME_A4" device=""/>
-<part name="FRAME2" library="Heinrich" deviceset="FRAME_A4" device=""/>
+<part name="FRAME1" library="Heinrich" deviceset="FRAME_A4" device="" value="MCU"/>
+<part name="FRAME2" library="Heinrich" deviceset="FRAME_A4" device="" value="CJ125#1"/>
 <part name="IC1" library="Heinrich" deviceset="CJ125_QFP32" device=""/>
 <part name="U$1" library="microbuilder" deviceset="AGND" device=""/>
 <part name="U$3" library="microbuilder" deviceset="GND" device=""/>
@@ -9618,7 +9618,7 @@ Source: Fairchild .. BAT54.pdf</description>
 <part name="U$9" library="microbuilder" deviceset="GND" device=""/>
 <part name="P+3" library="microbuilder" deviceset="VCC" device=""/>
 <part name="U$10" library="microbuilder" deviceset="AGND" device=""/>
-<part name="FRAME3" library="Heinrich" deviceset="FRAME_A4" device=""/>
+<part name="FRAME3" library="Heinrich" deviceset="FRAME_A4" device="" value="CAN&amp;DAC"/>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="10k"/>
 <part name="U$12" library="microbuilder" deviceset="GND" device=""/>
 <part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="100k"/>
@@ -9635,8 +9635,8 @@ Source: Fairchild .. BAT54.pdf</description>
 <part name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="470k"/>
 <part name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="4k7"/>
 <part name="R13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="100k"/>
-<part name="FRAME4" library="Heinrich" deviceset="FRAME_A4" device=""/>
-<part name="FRAME5" library="Heinrich" deviceset="FRAME_A4" device=""/>
+<part name="FRAME4" library="Heinrich" deviceset="FRAME_A4" device="" value="CJ125#2"/>
+<part name="FRAME5" library="Heinrich" deviceset="FRAME_A4" device="" value="Heater Control"/>
 <part name="IC4" library="Heinrich" deviceset="CJ125_QFP32" device=""/>
 <part name="U$4" library="microbuilder" deviceset="GND" device=""/>
 <part name="U$6" library="microbuilder" deviceset="AGND" device=""/>
@@ -9673,7 +9673,7 @@ Source: Fairchild .. BAT54.pdf</description>
 <part name="C11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" value="100nF"/>
 <part name="P+6" library="microbuilder" deviceset="VCC" device=""/>
 <part name="P+7" library="microbuilder" deviceset="VCC" device=""/>
-<part name="FRAME6" library="Heinrich" deviceset="FRAME_A4" device=""/>
+<part name="FRAME6" library="Heinrich" deviceset="FRAME_A4" device="" value="PSU"/>
 <part name="R19" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" value="4k7"/>
 <part name="R20" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" value="4k7"/>
 <part name="P+9" library="microbuilder" deviceset="VCC" device=""/>
@@ -9682,7 +9682,6 @@ Source: Fairchild .. BAT54.pdf</description>
 <part name="P+8" library="microbuilder" deviceset="VCC" device=""/>
 <part name="IC7" library="Heinrich" deviceset="REF50XX" device=""/>
 <part name="U$30" library="microbuilder" deviceset="GND" device=""/>
-<part name="Q1" library="Heinrich" deviceset="ABM3" device="" value="16MHz"/>
 <part name="C12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="18pF"/>
 <part name="C13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="18pF"/>
 <part name="U$2" library="microbuilder" deviceset="GND" device=""/>
@@ -9704,7 +9703,7 @@ Source: Fairchild .. BAT54.pdf</description>
 <part name="R24" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="6k8"/>
 <part name="C15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100nF"/>
 <part name="C16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100nF"/>
-<part name="FRAME7" library="Heinrich" deviceset="FRAME_A4" device=""/>
+<part name="FRAME7" library="Heinrich" deviceset="FRAME_A4" device="" value="Connector"/>
 <part name="D2" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="BAT54S" device="" package3d_urn="urn:adsk.eagle:package:43389/2"/>
 <part name="U$36" library="microbuilder" deviceset="GND" device=""/>
 <part name="U$37" library="microbuilder" deviceset="GND" device=""/>
@@ -9751,6 +9750,7 @@ Source: Fairchild .. BAT54.pdf</description>
 <part name="U$53" library="microbuilder" deviceset="AGND" device=""/>
 <part name="C30" library="Heinrich" deviceset="CAP_TANTALUM" device="SMCC" value="10µF"/>
 <part name="U$54" library="microbuilder" deviceset="GND" device=""/>
+<part name="Q1" library="Heinrich" deviceset="ABM3" device="" value="16MHz"/>
 </parts>
 <sheets>
 <sheet>
@@ -9766,7 +9766,6 @@ Source: Fairchild .. BAT54.pdf</description>
 <instance part="IC6" gate="G$1" x="43.18" y="22.86"/>
 <instance part="U$29" gate="G$1" x="58.42" y="10.16"/>
 <instance part="P+8" gate="VCC" x="58.42" y="30.48"/>
-<instance part="Q1" gate="G$1" x="33.02" y="55.88" rot="R90"/>
 <instance part="C12" gate="G$1" x="40.64" y="60.96" rot="R90"/>
 <instance part="C13" gate="G$1" x="43.18" y="50.8" rot="R270"/>
 <instance part="U$2" gate="G$1" x="53.34" y="55.88" rot="R90"/>
@@ -9778,6 +9777,7 @@ Source: Fairchild .. BAT54.pdf</description>
 <instance part="C16" gate="G$1" x="58.42" y="127"/>
 <instance part="C25" gate="G$1" x="63.5" y="147.32" rot="R270"/>
 <instance part="U$51" gate="G$1" x="53.34" y="147.32" rot="R270"/>
+<instance part="Q1" gate="G$1" x="33.02" y="55.88" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -9870,13 +9870,13 @@ Source: Fairchild .. BAT54.pdf</description>
 <label x="66.04" y="157.48" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="Q1" gate="G$1" pin="2"/>
 <wire x1="33.02" y1="58.42" x2="33.02" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="60.96" x2="22.86" y2="60.96" width="0.1524" layer="91"/>
 <junction x="33.02" y="60.96"/>
 <wire x1="33.02" y1="60.96" x2="38.1" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="C12" gate="G$1" pin="1"/>
 <label x="22.86" y="60.96" size="1.778" layer="95"/>
+<pinref part="Q1" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="XTAL2" class="0">
@@ -9886,13 +9886,13 @@ Source: Fairchild .. BAT54.pdf</description>
 <label x="66.04" y="152.4" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="Q1" gate="G$1" pin="1"/>
 <wire x1="33.02" y1="53.34" x2="33.02" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="50.8" x2="22.86" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="50.8" x2="38.1" y2="50.8" width="0.1524" layer="91"/>
 <junction x="33.02" y="50.8"/>
 <pinref part="C13" gate="G$1" pin="2"/>
 <label x="22.86" y="50.8" size="1.778" layer="95"/>
+<pinref part="Q1" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="!RESET" class="0">
@@ -10143,6 +10143,11 @@ Source: Fairchild .. BAT54.pdf</description>
 <pinref part="C24" gate="G$1" pin="2"/>
 <wire x1="177.8" y1="99.06" x2="175.26" y2="99.06" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="U$21" gate="G$1" pin="AGND"/>
+<pinref part="C8" gate="G$1" pin="2"/>
+<wire x1="215.9" y1="147.32" x2="215.9" y2="149.86" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="GND" class="0">
 <segment>
@@ -10164,11 +10169,6 @@ Source: Fairchild .. BAT54.pdf</description>
 <pinref part="C3" gate="G$1" pin="2"/>
 <wire x1="236.22" y1="149.86" x2="236.22" y2="147.32" width="0.1524" layer="91"/>
 <pinref part="U$16" gate="G$1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="C8" gate="G$1" pin="2"/>
-<pinref part="U$21" gate="G$1" pin="AGND"/>
-<wire x1="215.9" y1="149.86" x2="215.9" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$20" gate="G$1" pin="GND"/>
@@ -10918,8 +10918,8 @@ Source: Fairchild .. BAT54.pdf</description>
 </plain>
 <instances>
 <instance part="FRAME3" gate="G$1" x="0" y="0"/>
-<instance part="D1" gate="G$1" x="109.22" y="83.82"/>
-<instance part="U$18" gate="G$1" x="119.38" y="83.82" rot="R90"/>
+<instance part="D1" gate="G$1" x="99.06" y="83.82"/>
+<instance part="U$18" gate="G$1" x="109.22" y="83.82" rot="R90"/>
 <instance part="IC5" gate="G$1" x="68.58" y="83.82"/>
 <instance part="U$17" gate="G$1" x="53.34" y="68.58"/>
 <instance part="P+2" gate="VCC" x="53.34" y="99.06"/>
@@ -10937,7 +10937,7 @@ Source: Fairchild .. BAT54.pdf</description>
 <segment>
 <pinref part="D1" gate="G$1" pin="3"/>
 <pinref part="U$18" gate="G$1" pin="GND"/>
-<wire x1="114.3" y1="83.82" x2="116.84" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="83.82" x2="106.68" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC5" gate="G$1" pin="GND"/>
@@ -10958,21 +10958,17 @@ Source: Fairchild .. BAT54.pdf</description>
 <net name="CANH" class="0">
 <segment>
 <pinref part="IC5" gate="G$1" pin="CANH"/>
-<wire x1="81.28" y1="88.9" x2="91.44" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="91.44" y1="88.9" x2="91.44" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="D1" gate="G$1" pin="1"/>
-<wire x1="91.44" y1="86.36" x2="101.6" y2="86.36" width="0.1524" layer="91"/>
-<label x="83.82" y="88.9" size="1.778" layer="95"/>
+<wire x1="81.28" y1="86.36" x2="91.44" y2="86.36" width="0.1524" layer="91"/>
+<label x="83.82" y="86.36" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CANL" class="0">
 <segment>
 <pinref part="IC5" gate="G$1" pin="CANL"/>
-<wire x1="81.28" y1="78.74" x2="91.44" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="91.44" y1="78.74" x2="91.44" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="D1" gate="G$1" pin="2"/>
-<wire x1="91.44" y1="81.28" x2="101.6" y2="81.28" width="0.1524" layer="91"/>
-<label x="83.82" y="76.2" size="1.778" layer="95"/>
+<wire x1="81.28" y1="81.28" x2="91.44" y2="81.28" width="0.1524" layer="91"/>
+<label x="83.82" y="78.74" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RXCAN" class="0">
