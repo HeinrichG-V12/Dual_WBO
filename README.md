@@ -18,6 +18,7 @@
 - supports **LSU4.9** probes only
 - Automotive grade components
 - Molex MX150 20-pin automotive sealed connector (348302001)
+- 2x LSU 4.9 connector (TE 1813139-1)
 - 4 layer PCB
 
 ### Inputs: ### 
