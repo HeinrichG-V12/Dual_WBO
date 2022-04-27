@@ -23,13 +23,21 @@
 
 ### Inputs: ### 
 - 2x LSU4.9 probes
-- CAN high speed with 500kbit/s and extended IDs
-- TTL input for activation the controller
+- CAN HS with up to 1mbit/s
+- UART for configuration
+- UBat input for activation the controller
 
 ### Outputs: ### 
 - dual analog output, either as 0..4.096V for AFR 10..20 **OR** narrow band emulation
 - CAN output (AEM X-Series protocol) for both channels
 - CAN debug / diagnostic messages (pump current, battery voltage, heater power, ....)
+
+### Configuration: ### 
+- integrated with TunerStudio
+  - CAN speed
+  - CAN IDs
+  - analog output
+  - ...
 
 ### Suitable Bosch lambda probes: ###
 |Bosch number  |Length overall|Comment|
