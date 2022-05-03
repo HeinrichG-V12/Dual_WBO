@@ -150,6 +150,12 @@
     <Compile Include="main.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="pid\pid.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pid\pid.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="pwm\pwm.c">
       <SubType>compile</SubType>
     </Compile>
@@ -172,6 +178,7 @@
   <ItemGroup>
     <Folder Include="adc" />
     <Folder Include="can" />
+    <Folder Include="pid" />
     <Folder Include="pwm" />
     <Folder Include="uart" />
     <Folder Include="spi" />

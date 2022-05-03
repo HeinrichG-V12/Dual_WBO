@@ -10,6 +10,8 @@ can\can_lib.c
 
 main.c
 
+pid\pid.c
+
 pwm\pwm.c
 
 spi\spi.c

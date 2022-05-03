@@ -12,7 +12,8 @@
 // OC3B : PWM Output B for Timer/Counter3 (PE4)
 // frequency = F_CPU / PRESCALER * (1 + TOP)
 // frequency = 16MHz / 64 * (1 + 1023) = 16MHz / (64 * 1024) = 16 / 65536 = 244Hz
-// mode 7: fast pwm, 10 bit, 0x03FF TOP, update TOP, overflow on TOP, clear on compare match
+// mode 7: fast pwm, 10 bit, 0x03FF TOP, update TOP, overflow on TOP
+// clear oc3a and oc3b on compare match
 void pwm_init (void)
 {
 	TCCR3A |= (1 << WGM31)|(1 << WGM30)|(1 << COM3B1);
