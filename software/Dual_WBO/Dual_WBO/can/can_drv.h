@@ -29,6 +29,7 @@
 #include <stdbool.h>
 #include <avr/io.h>
 
+#include "config.h"
 #include "../helpers.h"
 
 //_____ D E F I N I T I O N S __________________________________________________
