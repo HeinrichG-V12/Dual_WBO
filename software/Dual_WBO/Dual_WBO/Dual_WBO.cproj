@@ -129,6 +129,21 @@
     <Compile Include="adc\adc.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="can\can_drv.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="can\can_drv.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="can\can_lib.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="can\can_lib.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="can\config.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="helpers.h">
       <SubType>compile</SubType>
     </Compile>
