@@ -10,6 +10,8 @@ can\can_lib.c
 
 main.c
 
+pwm\pwm.c
+
 spi\spi.c
 
 uart\uart.c
