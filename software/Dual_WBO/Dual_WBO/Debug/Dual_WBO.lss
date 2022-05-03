@@ -3,29 +3,31 @@ Dual_WBO.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .data         00000006  00800100  00000d98  00000e0c  2**0
+  0 .data         00000006  00800100  00000dcc  00000e60  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  1 .text         00000d98  00000000  00000000  00000074  2**1
+  1 .text         00000dcc  00000000  00000000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .comment      00000030  00000000  00000000  00000e12  2**0
+  2 .bss          00000102  00800106  00800106  00000e66  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000e66  2**0
                   CONTENTS, READONLY
-  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000e44  2**2
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000e98  2**2
                   CONTENTS, READONLY
-  4 .debug_aranges 000000d0  00000000  00000000  00000e84  2**0
+  5 .debug_aranges 000000d0  00000000  00000000  00000ed8  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   00001478  00000000  00000000  00000f54  2**0
+  6 .debug_info   0000151f  00000000  00000000  00000fa8  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 00000e2e  00000000  00000000  000023cc  2**0
+  7 .debug_abbrev 00000e4f  00000000  00000000  000024c7  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   00000e06  00000000  00000000  000031fa  2**0
+  8 .debug_line   00000e3c  00000000  00000000  00003316  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  000001b4  00000000  00000000  00004000  2**2
+  9 .debug_frame  000001c8  00000000  00000000  00004154  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    0000080c  00000000  00000000  000041b4  2**0
+ 10 .debug_str    00000862  00000000  00000000  0000431c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    00000997  00000000  00000000  000049c0  2**0
+ 11 .debug_loc    00000a00  00000000  00000000  00004b7e  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 000000b0  00000000  00000000  00005357  2**0
+ 12 .debug_ranges 000000b0  00000000  00000000  0000557e  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -129,7 +131,7 @@ Disassembly of section .text:
   b6:	11 e0       	ldi	r17, 0x01	; 1
   b8:	a0 e0       	ldi	r26, 0x00	; 0
   ba:	b1 e0       	ldi	r27, 0x01	; 1
-  bc:	e8 e9       	ldi	r30, 0x98	; 152
+  bc:	ec ec       	ldi	r30, 0xCC	; 204
   be:	fd e0       	ldi	r31, 0x0D	; 13
   c0:	00 e0       	ldi	r16, 0x00	; 0
   c2:	0b bf       	out	0x3b, r16	; 59
@@ -141,7 +143,7 @@ Disassembly of section .text:
   ce:	d9 f7       	brne	.-10     	; 0xc6 <__do_copy_data+0x10>
 
 000000d0 <__do_clear_bss>:
-  d0:	21 e0       	ldi	r18, 0x01	; 1
+  d0:	22 e0       	ldi	r18, 0x02	; 2
   d2:	a6 e0       	ldi	r26, 0x06	; 6
   d4:	b1 e0       	ldi	r27, 0x01	; 1
   d6:	01 c0       	rjmp	.+2      	; 0xda <.do_clear_bss_start>
@@ -150,11 +152,11 @@ Disassembly of section .text:
   d8:	1d 92       	st	X+, r1
 
 000000da <.do_clear_bss_start>:
-  da:	a6 30       	cpi	r26, 0x06	; 6
+  da:	a8 30       	cpi	r26, 0x08	; 8
   dc:	b2 07       	cpc	r27, r18
   de:	e1 f7       	brne	.-8      	; 0xd8 <.do_clear_bss_loop>
   e0:	16 d6       	rcall	.+3116   	; 0xd0e <main>
-  e2:	58 c6       	rjmp	.+3248   	; 0xd94 <_exit>
+  e2:	72 c6       	rjmp	.+3300   	; 0xdc8 <_exit>
 
 000000e4 <__bad_interrupt>:
   e4:	8d cf       	rjmp	.-230    	; 0x0 <__vectors>
@@ -391,7 +393,7 @@ uint8_t can_cmd(st_cmd_t* cmd)
  236:	bc c4       	rjmp	.+2424   	; 0xbb0 <__LOCK_REGION_LENGTH__+0x7b0>
  238:	e6 5b       	subi	r30, 0xB6	; 182
  23a:	ff 4f       	sbci	r31, 0xFF	; 255
- 23c:	a2 c5       	rjmp	.+2884   	; 0xd82 <__tablejump2__>
+ 23c:	bc c5       	rjmp	.+2936   	; 0xdb6 <__tablejump2__>
       {
         //------------      
         case CMD_TX:    
@@ -2157,26 +2159,60 @@ ISR(USART1_RX_vect)
  d72:	0f b6       	in	r0, 0x3f	; 63
  d74:	0f 92       	push	r0
  d76:	11 24       	eor	r1, r1
-	//tue was
- d78:	0f 90       	pop	r0
- d7a:	0f be       	out	0x3f, r0	; 63
- d7c:	0f 90       	pop	r0
- d7e:	1f 90       	pop	r1
- d80:	18 95       	reti
+ d78:	0b b6       	in	r0, 0x3b	; 59
+ d7a:	0f 92       	push	r0
+ d7c:	8f 93       	push	r24
+ d7e:	9f 93       	push	r25
+ d80:	ef 93       	push	r30
+ d82:	ff 93       	push	r31
+	uint8_t data, tmphead;
+	
+	data = UDR1; /* read the received data */
+ d84:	80 91 ce 00 	lds	r24, 0x00CE	; 0x8000ce <__TEXT_REGION_LENGTH__+0x7e00ce>
+	/* calculate buffer index */
+	tmphead = ( UART_rxHead + 1 ) & UART_RX_BUFFER_MASK;
+ d88:	e0 91 07 01 	lds	r30, 0x0107	; 0x800107 <UART_rxHead>
+ d8c:	ef 5f       	subi	r30, 0xFF	; 255
+ d8e:	ef 77       	andi	r30, 0x7F	; 127
+	UART_rxHead = tmphead; /* store new index */
+ d90:	e0 93 07 01 	sts	0x0107, r30	; 0x800107 <UART_rxHead>
+	if ( tmphead == UART_rxTail )
+ d94:	90 91 06 01 	lds	r25, 0x0106	; 0x800106 <__data_end>
+	{
+		/* ERROR! Receive buffer overflow */
+	}
 
-00000d82 <__tablejump2__>:
- d82:	ee 0f       	add	r30, r30
- d84:	ff 1f       	adc	r31, r31
- d86:	00 24       	eor	r0, r0
- d88:	00 1c       	adc	r0, r0
- d8a:	0b be       	out	0x3b, r0	; 59
- d8c:	07 90       	elpm	r0, Z+
- d8e:	f6 91       	elpm	r31, Z
- d90:	e0 2d       	mov	r30, r0
- d92:	09 94       	ijmp
+	UART_RX_BUFFER[tmphead] = data; /* store received data in buffer */
+ d98:	f0 e0       	ldi	r31, 0x00	; 0
+ d9a:	e8 57       	subi	r30, 0x78	; 120
+ d9c:	fe 4f       	sbci	r31, 0xFE	; 254
+ d9e:	80 83       	st	Z, r24
+}
+ da0:	ff 91       	pop	r31
+ da2:	ef 91       	pop	r30
+ da4:	9f 91       	pop	r25
+ da6:	8f 91       	pop	r24
+ da8:	0f 90       	pop	r0
+ daa:	0b be       	out	0x3b, r0	; 59
+ dac:	0f 90       	pop	r0
+ dae:	0f be       	out	0x3f, r0	; 63
+ db0:	0f 90       	pop	r0
+ db2:	1f 90       	pop	r1
+ db4:	18 95       	reti
 
-00000d94 <_exit>:
- d94:	f8 94       	cli
+00000db6 <__tablejump2__>:
+ db6:	ee 0f       	add	r30, r30
+ db8:	ff 1f       	adc	r31, r31
+ dba:	00 24       	eor	r0, r0
+ dbc:	00 1c       	adc	r0, r0
+ dbe:	0b be       	out	0x3b, r0	; 59
+ dc0:	07 90       	elpm	r0, Z+
+ dc2:	f6 91       	elpm	r31, Z
+ dc4:	e0 2d       	mov	r30, r0
+ dc6:	09 94       	ijmp
 
-00000d96 <__stop_program>:
- d96:	ff cf       	rjmp	.-2      	; 0xd96 <__stop_program>
+00000dc8 <_exit>:
+ dc8:	f8 94       	cli
+
+00000dca <__stop_program>:
+ dca:	ff cf       	rjmp	.-2      	; 0xdca <__stop_program>
