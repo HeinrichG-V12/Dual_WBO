@@ -10,8 +10,8 @@
 
 void adc_init (void)
 {
-	// adc enable, prescaler 32 (500khz)
-	ADCSRA |= (1 << ADEN)|(1 << ADPS2)|(1 << ADPS0);
+	// adc enable, prescaler 128 (125khz)
+	ADCSRA |= (1 << ADEN)|(1 << ADPS2)|(1 << ADPS2)|(1 << ADPS0);
 }
 
 uint16_t adc_read (uint8_t channel)

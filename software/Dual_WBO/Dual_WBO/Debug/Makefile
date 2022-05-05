@@ -35,6 +35,9 @@ LINKER_SCRIPT_DEP:=
 SUBDIRS :=  \
 ../adc \
 ../can \
+../cj125 \
+../ecu \
+../probe \
 ../pid \
 ../pwm \
 ../uart \
@@ -46,8 +49,11 @@ C_SRCS +=  \
 ../adc/adc.c \
 ../can/can_drv.c \
 ../can/can_lib.c \
+../cj125/cj125.c \
+../ecu/ecu.c \
 ../main.c \
 ../pid/pid.c \
+../probe/probe.c \
 ../pwm/pwm.c \
 ../spi/spi.c \
 ../uart/uart.c
@@ -63,8 +69,11 @@ OBJS +=  \
 adc/adc.o \
 can/can_drv.o \
 can/can_lib.o \
+cj125/cj125.o \
+ecu/ecu.o \
 main.o \
 pid/pid.o \
+probe/probe.o \
 pwm/pwm.o \
 spi/spi.o \
 uart/uart.o
@@ -73,8 +82,11 @@ OBJS_AS_ARGS +=  \
 adc/adc.o \
 can/can_drv.o \
 can/can_lib.o \
+cj125/cj125.o \
+ecu/ecu.o \
 main.o \
 pid/pid.o \
+probe/probe.o \
 pwm/pwm.o \
 spi/spi.o \
 uart/uart.o
@@ -83,8 +95,11 @@ C_DEPS +=  \
 adc/adc.d \
 can/can_drv.d \
 can/can_lib.d \
+cj125/cj125.d \
+ecu/ecu.d \
 main.d \
 pid/pid.d \
+probe/probe.d \
 pwm/pwm.d \
 spi/spi.d \
 uart/uart.d
@@ -93,8 +108,11 @@ C_DEPS_AS_ARGS +=  \
 adc/adc.d \
 can/can_drv.d \
 can/can_lib.d \
+cj125/cj125.d \
+ecu/ecu.d \
 main.d \
 pid/pid.d \
+probe/probe.d \
 pwm/pwm.d \
 spi/spi.d \
 uart/uart.d
@@ -134,6 +152,20 @@ can/can_lib.o: ../can/can_lib.c
 	@echo Finished building: $<
 	
 
+cj125/cj125.o: ../cj125/cj125.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=at90can128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\at90can128" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+ecu/ecu.o: ../ecu/ecu.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=at90can128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\at90can128" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
 ./main.o: .././main.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
@@ -142,6 +174,13 @@ can/can_lib.o: ../can/can_lib.c
 	
 
 pid/pid.o: ../pid/pid.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=at90can128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\at90can128" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+probe/probe.o: ../probe/probe.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=at90can128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\at90can128" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
