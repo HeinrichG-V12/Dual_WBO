@@ -46,5 +46,7 @@ static __inline bool __isSet(uint8_t __x1, uint8_t __x2)
 #define Min( a, b ) (a < b) ? a : b
 #define Max( a, b ) (a > b) ? a : b
 
+#define _BV(n) (1<<n)
+
 
 #endif /* HELPERS_H_ */
