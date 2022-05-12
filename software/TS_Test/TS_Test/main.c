@@ -27,6 +27,31 @@ uint8_t multiByteCommandBuffer[32];
 volatile uint16_t pwm1 = 128;
 volatile uint16_t pwm2 = 700;
 
+typedef struct {
+	// first byte in the config:
+	uint8_t isCanEnabled : 1;
+	uint8_t canSpeed : 2;
+	uint8_t interfaceActivation : 1;
+	uint8_t isCANDebugEnabled : 1;
+	uint8_t unused1 : 3;
+
+	// second byte in the config:
+	uint8_t isChannel1Enabled : 1;
+	uint8_t isChannel2Enabled : 1;
+	uint8_t channel1OutputMode : 2;
+	uint8_t channel2OutputMode : 2;
+	uint8_t channel1AnalogOutputMode : 1;
+	uint8_t channel2AnalogOutputMode : 1;
+
+	// third by in the config:
+	uint8_t stoich_ratio;
+
+	uint16_t channel1CANid;
+	uint16_t channel2CANid;
+	uint16_t debugMessageID;
+
+} tConfig;
+
 ISR (TIMER1_OVF_vect)    // Timer1 ISR
 {
 	PORTB ^= (1 << PB7);	// pb7 ist high
@@ -69,6 +94,8 @@ int main(void)
 	eeprom_read_block((void*)signature, (const void*) eeprom_signature, sizeof(eeprom_signature));
 	eeprom_read_block((void*)versionInfo, (const void*) eeprom_versionInfo, sizeof(eeprom_versionInfo));
 	eeprom_read_block((void*)controllerSettings, (const void*) eeprom_config, sizeof(eeprom_config));
+	
+	tConfig* configuration = (tConfig*)eeprom_config;
 	
 	uart_init();
 	init_100ms_timer();

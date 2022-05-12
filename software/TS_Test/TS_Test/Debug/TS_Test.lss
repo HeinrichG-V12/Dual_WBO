@@ -17,19 +17,19 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   6 .debug_aranges 00000100  00000000  00000000  000006b0  2**3
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_info   00001517  00000000  00000000  000007b0  2**0
+  7 .debug_info   00001636  00000000  00000000  000007b0  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_abbrev 00000dc5  00000000  00000000  00001cc7  2**0
+  8 .debug_abbrev 00000dff  00000000  00000000  00001de6  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_line   00000982  00000000  00000000  00002a8c  2**0
+  9 .debug_line   00000983  00000000  00000000  00002be5  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_frame  000001a4  00000000  00000000  00003410  2**2
+ 10 .debug_frame  000001a4  00000000  00000000  00003568  2**2
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_str    000006a3  00000000  00000000  000035b4  2**0
+ 11 .debug_str    000007a4  00000000  00000000  0000370c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_loc    000003a0  00000000  00000000  00003c57  2**0
+ 12 .debug_loc    000003a0  00000000  00000000  00003eb0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_ranges 00000070  00000000  00000000  00003ff7  2**0
+ 13 .debug_ranges 00000070  00000000  00000000  00004250  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -218,9 +218,9 @@ Disassembly of section .text:
  150:	57 cf       	rjmp	.-338    	; 0x0 <__vectors>
 
 00000152 <__vector_20>:
+	uint16_t debugMessageID;
 
-volatile uint16_t pwm1 = 128;
-volatile uint16_t pwm2 = 700;
+} tConfig;
 
 ISR (TIMER1_OVF_vect)    // Timer1 ISR
 {
@@ -358,6 +358,10 @@ int main(void)
  210:	ce 01       	movw	r24, r28
  212:	ca 96       	adiw	r24, 0x3a	; 58
 	
+	tConfig* configuration = (tConfig*)eeprom_config;
+	
+	
+	
 	uart_init();
  214:	4c d1       	rcall	.+664    	; 0x4ae <eeprom_read_block>
  216:	91 d0       	rcall	.+290    	; 0x33a <uart_init>
@@ -390,14 +394,14 @@ int main(void)
 	liveData[4] = (uint8_t)(pwm1 >> 8);
  23a:	90 91 03 02 	lds	r25, 0x0203	; 0x800203 <pwm1+0x1>
  23e:	94 83       	std	Z+4, r25	; 0x04
- 240:	80 91 00 02 	lds	r24, 0x0200	; 0x800200 <__data_start>
+ 240:	80 91 00 02 	lds	r24, 0x0200	; 0x800200 <__DATA_REGION_ORIGIN__>
 	
 	liveData[5] = (uint8_t)(pwm2 & 0xFF);
- 244:	90 91 01 02 	lds	r25, 0x0201	; 0x800201 <__data_start+0x1>
+ 244:	90 91 01 02 	lds	r25, 0x0201	; 0x800201 <__DATA_REGION_ORIGIN__+0x1>
  248:	85 83       	std	Z+5, r24	; 0x05
- 24a:	80 91 00 02 	lds	r24, 0x0200	; 0x800200 <__data_start>
+ 24a:	80 91 00 02 	lds	r24, 0x0200	; 0x800200 <__DATA_REGION_ORIGIN__>
 	liveData[6] = (uint8_t)(pwm2 >> 8);
- 24e:	90 91 01 02 	lds	r25, 0x0201	; 0x800201 <__data_start+0x1>
+ 24e:	90 91 01 02 	lds	r25, 0x0201	; 0x800201 <__DATA_REGION_ORIGIN__+0x1>
  252:	96 83       	std	Z+6, r25	; 0x06
 	
 	liveData[23] = 0;

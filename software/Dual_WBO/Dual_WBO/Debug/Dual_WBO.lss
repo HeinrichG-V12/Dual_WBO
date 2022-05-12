@@ -3,31 +3,33 @@ Dual_WBO.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .data         00000006  00800100  00000dcc  00000e60  2**0
+  0 .data         00000006  00800100  00000dcc  00000e80  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  1 .text         00000dcc  00000000  00000000  00000094  2**1
+  1 .text         00000dcc  00000000  00000000  000000b4  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .bss          00000102  00800106  00800106  00000e66  2**0
+  2 .bss          00000102  00800106  00800106  00000e86  2**0
                   ALLOC
-  3 .comment      00000030  00000000  00000000  00000e66  2**0
+  3 .eeprom       0000004d  00810000  00810000  00000e86  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  4 .comment      00000030  00000000  00000000  00000ed3  2**0
                   CONTENTS, READONLY
-  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000e98  2**2
+  5 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000f04  2**2
                   CONTENTS, READONLY
-  5 .debug_aranges 000000d0  00000000  00000000  00000ed8  2**0
+  6 .debug_aranges 000000f0  00000000  00000000  00000f44  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   0000151f  00000000  00000000  00000fa8  2**0
+  7 .debug_info   000017c2  00000000  00000000  00001034  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00000e4f  00000000  00000000  000024c7  2**0
+  8 .debug_abbrev 00000f39  00000000  00000000  000027f6  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00000e3c  00000000  00000000  00003316  2**0
+  9 .debug_line   00000f59  00000000  00000000  0000372f  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  000001c8  00000000  00000000  00004154  2**2
+ 10 .debug_frame  000001ec  00000000  00000000  00004688  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    00000862  00000000  00000000  0000431c  2**0
+ 11 .debug_str    000009ae  00000000  00000000  00004874  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00000a00  00000000  00000000  00004b7e  2**0
+ 12 .debug_loc    00000a00  00000000  00000000  00005222  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 000000b0  00000000  00000000  0000557e  2**0
+ 13 .debug_ranges 000000c0  00000000  00000000  00005c22  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
