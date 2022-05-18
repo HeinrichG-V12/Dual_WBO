@@ -58,7 +58,7 @@ static __inline uint8_t __high(uint16_t __x)
 
 #define _BV(n) (1<<n)
 
-#define low(x)   __low(x)
+#define low(x)	__low(x)
 #define high(x)	__high(x)
 
 
