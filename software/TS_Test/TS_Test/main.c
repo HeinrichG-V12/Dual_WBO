@@ -55,7 +55,7 @@ typedef struct {
 	uint8_t isCANDebugEnabled : 1;
 	uint8_t use29bitIdentifier :1;
 	uint8_t amplificationFactor :1;
-	uint8_t calculationAlgorithm : 1;
+	uint8_t unused1 : 1;
 
 	// second byte in the config:
 	uint8_t isChannel1Enabled : 1;
