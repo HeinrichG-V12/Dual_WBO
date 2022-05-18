@@ -22,7 +22,10 @@ extern uint16_t tcnt1_preload;
 uint8_t eeprom_signature[] EEMEM = "Speeduino Dual EGO Controller";
 uint8_t eeprom_versionInfo[] EEMEM = "Speeduino Dual EGO Controller v0.0.1";
 uint8_t eeprom_config[] EEMEM = {0x25, 0x2b, 0x93, 0x80, 0x01, 0x81, 0x01, 0x90, 0x01};
-	
+
+// pump current and lambda values from Bosch datasheet
+// Ip * 1000
+// lambda * 1000
 int16_t eeprom_ip[] EEMEM = {-2000, -1602, -1243, -927, -800, -652, -405, -183, -106, -40, 0, 15, 97, 193, 250, 329, 671, 938, 1150, 1385, 1700, 2000, 2150, 2250};
 uint16_t eeprom_lambda[] EEMEM = {650, 700, 750, 800, 822, 850, 900, 950, 970, 990, 1003, 1010, 1050, 1100, 1132, 1179, 1429, 1701, 1990, 2434, 3413, 5391, 7506, 10119};
 
