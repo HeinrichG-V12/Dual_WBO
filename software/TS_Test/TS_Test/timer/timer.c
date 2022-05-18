@@ -7,12 +7,16 @@
 
 #include "timer.h"
 
-void init_100ms_timer (void)
+uint16_t tcnt1_preload = 3036;
+
+void init_1s_timer (void)
 {
-	TCNT1 = 34286;
+	// 1s: prescale = 256 and preload = 3036
+	// 1s: prescale = 1024 and preload = 49911
+	TCNT1 = tcnt1_preload;
 	TCCR1A = 0x00;
-	TCCR1B = (1<<CS12);  // Timer mode with 256 prescler
-	TIMSK1 = (1 << TOIE1) ;   // Enable timer1 overflow interrupt(TOIE1)
+	TCCR1B |= (1<<CS12);		// Timer mode with 1024 prescler
+	TIMSK1 = (1 << TOIE1);		// Enable timer1 overflow interrupt(TOIE1)
 }
 
 /*

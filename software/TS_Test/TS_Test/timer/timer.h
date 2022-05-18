@@ -13,7 +13,7 @@
 #include <avr/interrupt.h>
 #include <stdint.h>
 
-void init_100ms_timer (void);
+void init_1s_timer (void);
 
 
 

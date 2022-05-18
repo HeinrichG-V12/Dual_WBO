@@ -7,8 +7,6 @@
 
 #include "uart.h"
 
-uint8_t string[] = "Hallo Welt, das ist ein Interrupttest!\r\n";
-
 void uart_init (void)
 {
 	uint8_t dummy;
@@ -88,20 +86,3 @@ void uart2_sendS(const uint8_t *pData, uint16_t size)
 	}
 }
 
-ISR(USART2_RX_vect)
-{
-	uint8_t data;
-	
-	data = UDR2;
-	
-	switch (data)
-	{
-		case 'A':
-		PORTB ^= (1 << PB7);	// pb7 ist high
-		break;
-		case 'F':
-		uart2_sendS((uint8_t*) string, sizeof(string)-1);
-		break;
-	}
-	
-}
