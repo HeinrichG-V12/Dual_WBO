@@ -14,7 +14,7 @@
 #include "timer/timer.h"
 
 /*
-http://evolutec.publicmsg.de/index.php?menu=software&content=prescalertools
+https://wolles-elektronikkiste.de/timer-und-pwm-teil-2-16-bit-timer1
 */
 
 extern uint16_t tcnt1_preload;
