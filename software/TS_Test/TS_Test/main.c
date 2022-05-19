@@ -9,15 +9,21 @@
 #include <stdio.h>
 #include <avr/eeprom.h>
 #include <avr/interrupt.h>
+#include <avr/pgmspace.h>
 
 #include "uart/uart.h"
 #include "timer/timer.h"
+#include "adc/adc.h"
+#include "helpers.h"
 
 /*
 https://wolles-elektronikkiste.de/timer-und-pwm-teil-2-16-bit-timer1
 */
 
 extern uint16_t tcnt1_preload;
+
+int16_t calculate_pump_current (uint16_t Ua, uint16_t Ua_cal);
+uint16_t interpolate (int16_t ip);
 
 uint8_t eeprom_signature[] EEMEM = "Speeduino Dual EGO Controller";
 uint8_t eeprom_versionInfo[] EEMEM = "Speeduino Dual EGO Controller v0.0.1";
@@ -37,18 +43,20 @@ uint8_t controllerSettings[sizeof(eeprom_config)];
 int16_t ip_values[sizeof(eeprom_ip)];
 uint16_t lambda_values[sizeof(eeprom_lambda)];
 
-uint8_t liveData[28];
+uint8_t liveData[32];
 
 uint8_t rxBuffer[32];
 
 uint8_t multiByteCommandBuffer[32];
 
+uint16_t tmp;
+
 volatile uint16_t pwm1 = 128;
 volatile uint16_t pwm2 = 700;
+volatile uint16_t mainLoopsPerSecond = 0;
+volatile uint16_t adc_value = 0;
 
 uint8_t string[] = "Hallo Welt, das ist ein Interrupttest!\r\n";
-
-
 
 typedef struct {
 	// first byte in the config:
@@ -85,28 +93,39 @@ typedef enum
 
 } tCANSpeed;
 
+typedef enum {
+	CJ125_E_SHORTCIRCUITGND
+	, CJ125_E_NOPOWER
+	, CJ125_E_SHORTCIRCUITBAT
+	, CJ125_OK
+} tCJ125_status;
+
+typedef struct {
+	tCJ125_status status;
+	uint16_t Ua_cal;
+	uint16_t Ua;
+	uint16_t Ur_cal;
+	uint16_t Ur;
+	int16_t Ip;	
+} tSensor;
+
 tConfig* configuration;
+
+tSensor sensor1;
+
+#define SENSOR_SHUNT	61.9
 
 ISR (TIMER1_OVF_vect)    // Timer1 ISR
 {
 	//PORTB ^= (1 << PB7);	// pb7 ist high
-	liveData[1] += 1;
-	
-	if ( liveData[1] == 170)
-	{
-		liveData[1] = 100;
-	}
-	
-	liveData[3]++;
-	
-	if (liveData[3] == 130)
-	{
-		liveData[3] = 68;
-	}
-
 
 	liveData[0]++;
 	PORTB ^= (1 << PB7);
+	
+	liveData[30] = low(mainLoopsPerSecond);
+	liveData[31] = high(mainLoopsPerSecond);
+	
+	mainLoopsPerSecond = 0;
 	
 	TCNT1 = tcnt1_preload;   // for 1 sec at 16 MHz
 }
@@ -131,25 +150,25 @@ ISR(USART2_RX_vect)
 		uart2_sendS((uint8_t*) controllerSettings, sizeof(controllerSettings));
 		break;
 		
-		case 'I':
-		// uart2_sendS((uint8_t*) ip_values, sizeof(ip_values));
-		uart2_sendC(sizeof(eeprom_ip));
-		
-		break;
 		
 		case 'L':
-		// uart2_sendS((uint8_t*) lambda_values, sizeof(lambda_values));
-		uart2_sendC(sizeof(eeprom_lambda));
+		tmp = adc_value;
+		
+		// sensor1.Ip = ((sensor1.Ua-sensor1.Ua_cal)/(619*8))*1000;
+		
+		uart2_sendS((uint8_t*) adc_value, sizeof(adc_value));
 		break;
 	}
 }
+
+
 
 int main(void)
 {
 	uart_init();
 	uart2_sendS((uint8_t*) "reboot!", 7);
+	adc_init();
 	
-
 	DDRB |= (1 << PB7);		// pb7 ist ausgang
 	// PORTB |= (1 << PB7);	// pb7 ist high
 
@@ -163,26 +182,25 @@ int main(void)
  	configuration = (tConfig*)controllerSettings;
 	
 	init_1s_timer();
+	
+	uint16_t blah;
 		
 	sei();
 	
+	sensor1.status = CJ125_OK;
+	sensor1.Ua_cal = 1500;
 
 	uint8_t offset;
 	uint8_t value;
 	uint8_t pageIdentifier = 0;
 	
-	liveData[1] = 127;
-	liveData[2] = 100;
-	liveData[3] = 92;
+	liveData[1] = 138;
 	
-	liveData[4] = (uint8_t)(pwm1 & 0xFF);
-	liveData[5] = (uint8_t)(pwm1 >> 8);
+	liveData[6] = low(pwm1);
+	liveData[7] = high(pwm1);
 	
-	liveData[6] = (uint8_t)(pwm2 & 0xFF);
-	liveData[7] = (uint8_t)(pwm2 >> 8);
-	
-	liveData[24] = 0;
-
+	liveData[8] = low(pwm2);
+	liveData[9] = high(pwm2);
 	
     /* Replace with your application code */
     while (1) 
@@ -215,6 +233,21 @@ int main(void)
 				break;
 				
 			case 'A':	// reading live data
+				adc_value = adc_read(3);
+				sensor1.Ua = adc2voltage_mili(adc_value);
+				liveData[12] = low(sensor1.Ua);
+				liveData[13] = high(sensor1.Ua);
+				
+				sensor1.Ip = calculate_pump_current(sensor1.Ua, sensor1.Ua_cal);
+								
+				liveData[18] = low(sensor1.Ip);
+				liveData[19] = high(sensor1.Ip);
+				
+				blah = interpolate(sensor1.Ip);
+				
+				liveData[2] = low(blah);
+				liveData[3] = high(blah);
+								
 				uart_sendS((uint8_t*) liveData, sizeof(liveData));
 				break;
 				
@@ -247,5 +280,53 @@ int main(void)
 				pageIdentifier = uart_getData();
 				break;								
 		}
+		
+		mainLoopsPerSecond++;
     }
+}
+
+int16_t calculate_pump_current (uint16_t Ua, uint16_t Ua_cal)
+{	
+	return (((int16_t)Ua - (int16_t)Ua_cal) / (SENSOR_SHUNT * 8) * 1000);
+}
+
+uint16_t interpolate (int16_t ip)
+{
+	uint16_t y = 0;
+	uint8_t counter = 0;
+	
+	float gain, offset;
+	
+	// check against the both ends
+	if (ip <= ip_values[0]) 
+	{
+		y = lambda_values[0];
+	}
+	
+	if (ip >= ip_values[23])
+	{
+		y = lambda_values[23];
+	}
+	
+	while ((y == 0) && (counter < 23))
+	{
+		// exists an exact value?
+		if ( ip_values[counter] == ip)
+		{
+			y = lambda_values[counter];
+		}
+		
+		// ip value is between two values
+		else if ((ip_values[counter] <= ip) && (ip <= ip_values[counter + 1]))
+		{
+			gain = (float) (lambda_values[counter+1] - lambda_values[counter]) / (ip_values[counter + 1] -  ip_values[counter]);
+			
+			offset = (lambda_values[counter+1] - (ip_values[counter + 1] * gain));
+			
+			y = (uint16_t) ((ip * gain) + offset);
+		}
+		counter++;
+	}
+	
+	return y;
 }

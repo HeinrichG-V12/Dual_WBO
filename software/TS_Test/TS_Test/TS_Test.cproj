@@ -124,6 +124,7 @@
   <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
   <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
   <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.compiler.miscellaneous.Verbose>True</avrgcc.compiler.miscellaneous.Verbose>
   <avrgcc.linker.libraries.Libraries>
     <ListValues>
       <Value>libm</Value>
@@ -139,6 +140,12 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="adc\adc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="adc\adc.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="helpers.h">
       <SubType>compile</SubType>
     </Compile>
@@ -159,6 +166,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="adc" />
     <Folder Include="timer" />
     <Folder Include="uart" />
   </ItemGroup>

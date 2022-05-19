@@ -39,12 +39,12 @@ static __inline bool __isSet(uint8_t __x1, uint8_t __x2)
 
 static __inline uint8_t __low(uint16_t __x)
 {
-	return (uint8_t) ((__x) & 0xFF)
+	return (uint8_t) ((__x) & 0xFF);
 }
 
 static __inline uint8_t __high(uint16_t __x)
 {
-	return (uint8_t) (((__x)>>8) & 0xFF)
+	return (uint8_t) (((__x)>>8) & 0xFF);
 }
 
 #define bswap_16(x) __bswap_16(x)
@@ -56,10 +56,11 @@ static __inline uint8_t __high(uint16_t __x)
 #define Min( a, b ) (a < b) ? a : b
 #define Max( a, b ) (a > b) ? a : b
 
-#define _BV(n) (1<<n)
+// #define _BV(n) (1<<n)
 
 #define low(x)	__low(x)
 #define high(x)	__high(x)
 
+#define NUMBEROFELEMENTS(x) (sizeof(x)/sizeof(*(x)))
 
 #endif /* HELPERS_H_ */
