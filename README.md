@@ -28,7 +28,7 @@
 - UBat input for activation the controller
 
 ### Outputs: ### 
-- dual analog output, either as 0..5V for Lambda 0.65 to 1.35 **OR** narrow band emulation
+- dual analog output, either as 0..5V for Lambda 0.65 to 1.3 (0.25v to 4.8v) **OR** narrow band emulation
 - CAN output (AEM X-Series protocol) for both channels
 - CAN debug / diagnostic messages (pump current, battery voltage, heater power, ....)
 
@@ -38,6 +38,14 @@
   - CAN IDs
   - analog output
   - ...
+
+### Bosch CJ125 (LQFP32 package) part numbers:
+
+|Bosch part number|
+|:----------------|
+|30615|
+|40103|
+|30522|
 
 ### Suitable Bosch lambda probes: ###
 |Bosch number  |Length overall|Comment|
