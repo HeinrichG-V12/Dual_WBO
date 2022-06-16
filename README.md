@@ -47,6 +47,10 @@
 |40103|
 |30522|
 
+#### A couple of CJ125 ICs ####
+<img src="./hardware/datasheet/CJ125.jpg" title="Bosch CJ125 ICs">
+
+
 ### Suitable Bosch lambda probes: ###
 |Bosch number  |Length overall|Comment|
 |--------------|--------------|-------|
