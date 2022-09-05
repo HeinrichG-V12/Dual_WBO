@@ -44,6 +44,18 @@
   - analog output
   - ...
 
+### Bosch CJ125 (LQFP32 package) part numbers
+
+|Bosch part number|
+|:----------------|
+|30615|
+|40103|
+|30522|
+
+#### A couple of CJ125 ICs
+
+![alt text](./hardware/datasheet/CJ125.jpg "Bosch CJ125 ICs")
+
 ### Suitable Bosch lambda probes
 
 |Bosch number  |Length overall|Comment|
