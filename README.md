@@ -1,45 +1,51 @@
-# Dual_WBO
+# Dual channel wideband oxygen controller
 
-## Development status: ##
+## Development status
+
 - Hardware: working in progress, check hardware/V0.0.1 for actual status
 - Software: not started yet
 
-### Dual WBO controller based on: ### 
+### Dual WBO controller based on
+
 - Microchip AT90CAN128
 - 2x Bosch CJ125 wideband lambda controller
 - NXP TJA1051T high speed can transceiver (Rohm BD41041FJ-CE2 can be used instead)
-- Analog Devices LTC2633 dual channel 10-bit I²C DAC
 - Infineon TLE42754D LDO 5v and 450mA
 - TI REF5050-Q1 5v and 10mA precision reference (0.05%) for TLS115
 - Infineon TLS115B0EJ voltage tracker for analog part, provides 5v and 150mA
 - ...
 
-### Features: ### 
+### Features
+
 - supports **LSU4.9** probes only
 - Automotive grade components
 - Molex MX150 20-pin automotive sealed connector (348302001)
 - 2x LSU 4.9 connector (TE 1813139-1)
 - 4 layer PCB
 
-### Inputs: ### 
+### Inputs
+
 - 2x LSU4.9 probes
 - CAN HS with up to 1mbit/s
 - UART for configuration
 - UBat input for activation the controller
 
-### Outputs: ### 
+### Outputs
+
 - dual analog output, either as 0..5V for Lambda 0.65 to 1.35 **OR** narrow band emulation
 - CAN output (AEM X-Series protocol) for both channels
 - CAN debug / diagnostic messages (pump current, battery voltage, heater power, ....)
 
-### Configuration: ### 
+### Configuration
+
 - integrated with TunerStudio
   - CAN speed
   - CAN IDs
   - analog output
   - ...
 
-### Suitable Bosch lambda probes: ###
+### Suitable Bosch lambda probes
+
 |Bosch number  |Length overall|Comment|
 |--------------|--------------|-------|
 |0 258 017 025 |1000mm|Bosch motorsport part|
@@ -52,7 +58,8 @@
 |0 258 017 038 |340mm|grey, used by BMW (11787537984)|
 |...|||
 
-### LSU4.9 probe pinout: ###
+### LSU4.9 probe pinout
+
 |Pin#|Color|Description|Symbol|
 |----|-----|--------|-----------|
 |1|red|Pump current APE|IP|

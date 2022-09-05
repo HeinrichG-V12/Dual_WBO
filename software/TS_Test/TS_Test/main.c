@@ -233,7 +233,7 @@ int main(void)
 				break;
 				
 			case 'A':	// reading live data
-				adc_value = adc_read(3);
+				adc_value = adc_read_avg(3, 5);
 				sensor1.Ua = adc2voltage_mili(adc_value);
 				liveData[12] = low(sensor1.Ua);
 				liveData[13] = high(sensor1.Ua);
