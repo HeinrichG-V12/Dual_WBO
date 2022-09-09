@@ -58,8 +58,8 @@
 
 ### Suitable Bosch lambda probes
 
-Basically, the Bosch probes whose numbers start with **0 258 017** will fit.
-Bosch numbers beginning with **0 258 007** are LSU4.2 probes and will not fit.
+Basically, the Bosch probes whose numbers start with **0 258 017** will fit, also Bosch **0 281 004**.  
+Bosch numbers beginning with **0 258 007** are *LSU 4.2* probes and will not fit.
 
 |Bosch number  |Length overall|Comment|
 |--------------|--------------|-------|
@@ -69,6 +69,7 @@ Bosch numbers beginning with **0 258 007** are LSU4.2 probes and will not fit.
 |0 258 017 038 |340mm|grey, used by BMW (11787537984)|
 |0 258 017 092 |950mm|black, used by BMW (1178 7540167)|
 |0 258 017 126 |680mm|black, used by BMW after 09/2006 (1178 7561410)|
+|0 281 004 028 |540mm||
 |0 281 004 150 |1215mm||
 |0 281 004 184 |1000mm||
 |...|||
