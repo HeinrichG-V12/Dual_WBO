@@ -22,7 +22,7 @@ class Heater {
 		void setDuty (uint16_t duty);
 		uint16_t voltageMillis;
 		PID pid;
-	};
+};
 
 
 
