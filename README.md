@@ -9,9 +9,10 @@
 
 - Microchip AT90CAN128
 - 2x Bosch CJ125 wideband lambda controller
-- NXP TJA1051T high speed can transceiver (Rohm BD41041FJ-CE2 can be used instead)
+- NXP TJA1050T high speed can transceiver
 - Infineon TLE42754D LDO 5v and 450mA
-- TI REF5050-Q1 5v and 10mA precision reference (0.05%) for TLS115
+- Analog Devices AD5337 8-bit DAC
+- Analog Devices ADR02 5v and 10mA precision reference (0.1%) for TLS115
 - Infineon TLS115B0EJ voltage tracker for analog part, provides 5v and 150mA
 - ...
 
@@ -19,9 +20,9 @@
 
 - supports **LSU4.9** probes only
 - Automotive grade components
-- Molex MX150 20-pin automotive sealed connector (348302001)
 - 2x LSU 4.9 connector (TE 1813139-1)
 - 4 layer PCB
+- integrated with TunerStudio
 
 ### Inputs
 
@@ -33,16 +34,7 @@
 ### Outputs
 
 - dual analog output, either as 0..5V for Lambda 0.65 to 1.35 **OR** narrow band emulation
-- CAN output (AEM X-Series protocol) for both channels
-- CAN debug / diagnostic messages (pump current, battery voltage, heater power, ....)
-
-### Configuration
-
-- integrated with TunerStudio
-  - CAN speed
-  - CAN IDs
-  - analog output
-  - ...
+- CAN output (AEM X-Series protocol) for both channels and debug messages
 
 ### Bosch CJ125 (LQFP32 package) part numbers
 
